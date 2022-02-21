@@ -52,10 +52,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\GameManager.cs" />
-     <Compile Include="Assets\FieldController.cs" />
-     <Compile Include="Assets\DragDrop.cs" />
-     <Compile Include="Assets\ObjectSwapper.cs" />
+     <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\FieldController.cs" />
+     <Compile Include="Assets\Resources\Scripts\DragDrop.cs" />
+     <Compile Include="Assets\Resources\Scripts\ObjectSwapper.cs" />
+     <Compile Include="Assets\MiniCharController.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -629,6 +630,9 @@
  <Reference Include="Unity.2D.Animation.Editor">
  <HintPath>C:/Users/yunus/PROJELER/Brackeys Jam 2022/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Recorder.Editor">
+ <HintPath>C:/Users/yunus/PROJELER/Brackeys Jam 2022/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.001">
  <HintPath>C:/Users/yunus/PROJELER/Brackeys Jam 2022/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
  </Reference>
@@ -637,6 +641,9 @@
  </Reference>
  <Reference Include="Unity.2D.PixelPerfect">
  <HintPath>C:/Users/yunus/PROJELER/Brackeys Jam 2022/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Recorder.Base">
+ <HintPath>C:/Users/yunus/PROJELER/Brackeys Jam 2022/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
  <HintPath>C:/Users/yunus/PROJELER/Brackeys Jam 2022/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
@@ -716,14 +723,8 @@
  <Reference Include="Unity.2D.SpriteShape.Runtime">
  <HintPath>C:/Users/yunus/PROJELER/Brackeys Jam 2022/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Recorder.Editor">
- <HintPath>C:/Users/yunus/PROJELER/Brackeys Jam 2022/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Recorder">
  <HintPath>C:/Users/yunus/PROJELER/Brackeys Jam 2022/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Recorder.Base">
- <HintPath>C:/Users/yunus/PROJELER/Brackeys Jam 2022/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
