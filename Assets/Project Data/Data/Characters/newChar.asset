@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01466f811dadf64b8a84eb3110ca821, type: 3}
   m_Name: newChar
   m_EditorClassIdentifier: 
-  charName: 
-  age: 0
-  destination: 
+  charName: Testchar
+  age: 19
+  destination: "T\xFCrkiye"
   items: []

@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Project Data\Scripts\GameManager.cs" />
-     <Compile Include="Assets\MiniCharController.cs" />
+     <Compile Include="Assets\Project Data\Scripts\MiniCharController.cs" />
      <Compile Include="Assets\Project Data\Scripts\FieldController.cs" />
      <Compile Include="Assets\Project Data\Scripts\DragDrop.cs" />
      <Compile Include="Assets\Project Data\Scripts\ObjectSwapper.cs" />

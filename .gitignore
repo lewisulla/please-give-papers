@@ -5,3 +5,4 @@ Library
 *.cache
 *.json
 *.pdb
+*.meta
