@@ -314,6 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 724054868}
   spawnParent: {fileID: 685915618}
+  portrait: {fileID: 425424836}
 --- !u!4 &377830732
 Transform:
   m_ObjectHideFlags: 0
@@ -973,6 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56fecb17d19ee964399c1aadce9955cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charData: {fileID: 11400000, guid: 0ad24bf3d8bbb51489d7defa547f4144, type: 2}
 --- !u!95 &772883877
 Animator:
   serializedVersion: 3
@@ -1832,6 +1834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56fecb17d19ee964399c1aadce9955cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charData: {fileID: 11400000, guid: 0ad24bf3d8bbb51489d7defa547f4144, type: 2}
 --- !u!95 &1930767119
 Animator:
   serializedVersion: 3
@@ -1980,6 +1983,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217248094}
     m_Modifications:
+    - target: {fileID: 46796788952504968, guid: 350b41b9b198e7d45b1c8cacec9220cc, type: 3}
+      propertyPath: charData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ad24bf3d8bbb51489d7defa547f4144, type: 2}
     - target: {fileID: 46796788952504970, guid: 350b41b9b198e7d45b1c8cacec9220cc, type: 3}
       propertyPath: m_RootOrder
       value: 0

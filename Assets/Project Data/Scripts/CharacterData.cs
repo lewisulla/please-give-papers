@@ -8,6 +8,7 @@ public class CharacterData : ScriptableObject
     public string charName;
     public int age;
     public string destination;
+    public Sprite portrait;
 
     public List<ItemData> items;
 

@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MiniCharController : MonoBehaviour
 {
+    [SerializeField] private CharacterData charData;
+
     private Rigidbody2D _rb;
     private Animator _anim;
     private Transform _front;
@@ -20,8 +23,8 @@ public class MiniCharController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        string tag = col.gameObject.tag;
-        switch (tag)
+        string objectTag = col.gameObject.tag;
+        switch (objectTag)
         {
             case "MinimapChar":
                 if (_front == null)
@@ -34,8 +37,7 @@ public class MiniCharController : MonoBehaviour
                 break;
             
             case "Server":
-                _rb.velocity = Vector2.zero;
-                _anim.SetTrigger("Stop");
+                Serving();
                 break;
             
             case "End":
@@ -55,10 +57,23 @@ public class MiniCharController : MonoBehaviour
         }
     }
 
+    public void Serving()
+    {
+        _rb.velocity = Vector2.zero;
+        _anim.SetTrigger("Stop");
+
+        Image portrait = GameManager.Instance.portrait;
+        portrait.enabled = true;
+        portrait.sprite = charData.portrait;
+    }
+
     public void Served()
     {
         Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), GameObject.FindWithTag("Server").GetComponent<Collider2D>());
         _rb.velocity= new Vector2(2,0);
         _anim.SetTrigger("Continue");
+        
+        Image portrait = GameManager.Instance.portrait;
+        portrait.enabled = false;
     }
 }

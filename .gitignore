@@ -6,3 +6,5 @@ Library
 *.json
 *.pdb
 *.meta
+*.xml
+*.mp4

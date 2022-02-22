@@ -15,4 +15,5 @@ MonoBehaviour:
   charName: Testchar
   age: 19
   destination: "T\xFCrkiye"
+  portrait: {fileID: 21300000, guid: bbe945631ce9a244d9083d2fd708167d, type: 3}
   items: []
