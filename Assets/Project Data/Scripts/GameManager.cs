@@ -24,8 +24,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SpawnItem(ItemData data)
+    public void SpawnItem(CharacterData characterData)
     {
-        Instantiate(data.itemPrefab,spawner.position,quaternion.identity,spawnParent);
+        foreach (var itemData in characterData.items)
+        {
+            var instance=Instantiate(itemData.itemPrefab,spawner.position,quaternion.identity,spawnParent);
+            instance.GetComponent<Document>().imageHolder.sprite = characterData.portrait;
+        }
+        
     }
 }

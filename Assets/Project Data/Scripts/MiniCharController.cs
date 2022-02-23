@@ -61,10 +61,16 @@ public class MiniCharController : MonoBehaviour
     {
         _rb.velocity = Vector2.zero;
         _anim.SetTrigger("Stop");
-
-        Image portrait = GameManager.Instance.portrait;
+        
+        GameManager instance = GameManager.Instance;
+        Image portrait = instance.portrait;
         portrait.enabled = true;
         portrait.sprite = charData.portrait;
+
+        
+        instance.SpawnItem(charData);
+        
+        
     }
 
     public void Served()

@@ -16,4 +16,6 @@ MonoBehaviour:
   age: 19
   destination: "T\xFCrkiye"
   portrait: {fileID: 21300000, guid: bbe945631ce9a244d9083d2fd708167d, type: 3}
-  items: []
+  items:
+  - {fileID: 11400000, guid: 12e1023961c3e0245be463bbc00feb08, type: 2}
+  - {fileID: 11400000, guid: 63dcdf10c38a3564da7b2b3f371b996f, type: 2}

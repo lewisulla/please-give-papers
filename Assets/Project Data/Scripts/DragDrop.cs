@@ -5,12 +5,17 @@ using UnityEngine;
 
 public class DragDrop : MonoBehaviour
 {
+    private Rigidbody2D _rb;
+    private void Awake()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+    }
 
     private Vector3 _dragOffset;
     private void OnMouseDown()
     {
         _dragOffset = transform.position - GetMousePos();
-        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        _rb.bodyType = RigidbodyType2D.Kinematic;
 
     }
 
@@ -19,13 +24,15 @@ public class DragDrop : MonoBehaviour
         if (GetComponent<ObjectSwapper>().GetMode()==0)
         {
             
-            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            _rb.bodyType = RigidbodyType2D.Dynamic;
+            
         }
         else
         {
             
-            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            _rb.bodyType = RigidbodyType2D.Static;
         }
+        
     }
 
     void OnMouseDrag()

@@ -784,7 +784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 724054868}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ObjectSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1622,7 +1622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1841527575}
   - component: {fileID: 1841527576}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlatformObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1680,7 +1680,7 @@ GameObject:
   - component: {fileID: 1855411126}
   - component: {fileID: 1855411127}
   - component: {fileID: 1855411128}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Field_Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1916,7 +1916,7 @@ GameObject:
   - component: {fileID: 1960769237}
   - component: {fileID: 1960769238}
   - component: {fileID: 1960769239}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Field_Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
