@@ -58,9 +58,11 @@
      <Compile Include="Assets\Project Data\Scripts\DragDrop.cs" />
      <Compile Include="Assets\Project Data\Scripts\ItemData.cs" />
      <Compile Include="Assets\Project Data\Scripts\ObjectSwapper.cs" />
-     <Compile Include="Assets\Project Data\Scripts\Document.cs" />
      <Compile Include="Assets\Project Data\Scripts\TextData.cs" />
+     <Compile Include="Assets\Project Data\Scripts\Document.cs" />
      <Compile Include="Assets\Project Data\Scripts\SpriteData.cs" />
+     <Compile Include="Assets\QueueChecker.cs" />
+     <Compile Include="Assets\DeskButton.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

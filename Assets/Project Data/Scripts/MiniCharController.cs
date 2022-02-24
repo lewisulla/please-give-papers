@@ -4,14 +4,13 @@ using UnityEngine.UI;
 
 public class MiniCharController : MonoBehaviour
 {
-    public string fullName;
-    public string country;
+    public string fullName, country, birthDate, gender;
     public Sprite portrait;
     public List<ItemData> items;
-    
-    
-    private Rigidbody2D _rb;
-    private Animator _anim;
+
+
+    public Rigidbody2D _rb;
+    public Animator _anim;
     private Transform _front;
     private void Awake()
     {
@@ -20,12 +19,22 @@ public class MiniCharController : MonoBehaviour
         _rb.velocity = new Vector2(2,0);
     }
 
-    public void CharSetup(string fullName, string country, Sprite portrait, List<ItemData> items)
+    public void CharSetup(string fullName, string country, Sprite portrait, List<ItemData> items, string birthDate)
     {
         this.fullName = fullName;
         this.country = country;
         this.portrait = portrait;
         this.items = items;
+        this.birthDate = birthDate;
+
+        if (Random.Range(1, 3) == 1)
+        {
+            gender = "Male";
+        }
+        else
+        {
+            gender = "Female";
+        }
     }
 
 
@@ -39,15 +48,6 @@ public class MiniCharController : MonoBehaviour
         string objectTag = col.gameObject.tag;
         switch (objectTag)
         {
-            case "MinimapChar":
-                if (_front == null)
-                {
-                    _rb.velocity = Vector2.zero;
-                    _front = col.transform;
-                    _anim.SetTrigger("Stop"); 
-                }
-
-                break;
             
             case "Server":
                 Serving();
@@ -60,15 +60,7 @@ public class MiniCharController : MonoBehaviour
         }
     }
     
-    private void OnCollisionExit2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("MinimapChar") && col.transform == _front)
-        {
-            _rb.velocity = new Vector2(2,0);
-            _front = null;
-            _anim.SetTrigger("Continue");
-        }
-    }
+    
 
     public void Serving()
     {
@@ -80,9 +72,9 @@ public class MiniCharController : MonoBehaviour
         gamePortrait.enabled = true;
         gamePortrait.sprite = portrait;
         
-        instance.SpawnItem(this);
-        
-        
+        StartCoroutine(instance.SpawnItem(this));
+
+
     }
 
     public void Served()

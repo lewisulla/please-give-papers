@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public Transform minimapParent;
 
     [Space(20)] 
-    public Transform spawner;
+    public Transform[] spawners;
     public Transform spawnParent;
 
     [Space(20)] 
@@ -47,12 +47,19 @@ public class GameManager : MonoBehaviour
         StartCoroutine(Spawner());
     }
 
-    public void SpawnItem(MiniCharController character)
+    public IEnumerator SpawnItem(MiniCharController character)
     {
+        int counter = 0;
         foreach (var itemData in character.items)
         {
-            var instance=Instantiate(itemData.itemPrefab,spawner.position,quaternion.identity,spawnParent);
-            instance.GetComponent<Document>().imageHolder.sprite = character.portrait;
+            var instance=Instantiate(itemData.itemPrefab,spawners[counter++].position,quaternion.identity,spawnParent);
+            Document document = instance.GetComponent<Document>();
+            document.imageHolder.sprite = character.portrait;
+            document.textHolder[0].text = character.fullName;
+            document.textHolder[1].text = character.country;
+            document.textHolder[2].text = character.birthDate;
+            document.textHolder[3].text = character.gender;
+            yield return new WaitForSecondsRealtime(0.5f);
         }
         
     }
@@ -104,7 +111,13 @@ public class GameManager : MonoBehaviour
         string fullName = name + " " + surname;
         GameObject charObject = Instantiate(minimapPrefab, minimapSpawner.position, Quaternion.identity, minimapParent);
         MiniCharController charController = charObject.GetComponent<MiniCharController>();
-        charController.CharSetup(fullName,country,charPortrait,items);
+
+        string year = rng.Next(1970, 2001).ToString();
+        string month = rng.Next(1, 13).ToString();
+        string day = rng.Next(1, 13).ToString();
+        string date = day+"/"+month + "/" + year;
+        
+        charController.CharSetup(fullName,country,charPortrait,items, date);
 
     }
 }
