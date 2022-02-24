@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0923b85c0ffaef940a956f28c66fbb8c, type: 3}
+  m_Name: Male Portraits
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 139dc4d705c62f54a8ea8cab872053fe, type: 3}
+  - {fileID: 21300000, guid: ac6cfdc4e223a094a94cf725f1fc74ca, type: 3}
+  - {fileID: 21300000, guid: e3371f9ce7bf2f0449e767dbbf40f428, type: 3}
+  - {fileID: 21300000, guid: 1cc571c93aa10b048b62c75c6f6376fa, type: 3}
+  - {fileID: 21300000, guid: 9a1a7a9788c19b44f935e2f4b6f91357, type: 3}
+  - {fileID: 21300000, guid: 94f2782b0e63ef547bc76d26f2abac24, type: 3}

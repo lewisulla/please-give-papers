@@ -1,10 +1,15 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MiniCharController : MonoBehaviour
 {
-    [SerializeField] private CharacterData charData;
-
+    public string fullName;
+    public string country;
+    public Sprite portrait;
+    public List<ItemData> items;
+    
+    
     private Rigidbody2D _rb;
     private Animator _anim;
     private Transform _front;
@@ -13,6 +18,14 @@ public class MiniCharController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
         _rb.velocity = new Vector2(2,0);
+    }
+
+    public void CharSetup(string fullName, string country, Sprite portrait, List<ItemData> items)
+    {
+        this.fullName = fullName;
+        this.country = country;
+        this.portrait = portrait;
+        this.items = items;
     }
 
 
@@ -63,12 +76,11 @@ public class MiniCharController : MonoBehaviour
         _anim.SetTrigger("Stop");
         
         GameManager instance = GameManager.Instance;
-        Image portrait = instance.portrait;
-        portrait.enabled = true;
-        portrait.sprite = charData.portrait;
-
+        Image gamePortrait = instance.portrait;
+        gamePortrait.enabled = true;
+        gamePortrait.sprite = portrait;
         
-        instance.SpawnItem(charData);
+        instance.SpawnItem(this);
         
         
     }
