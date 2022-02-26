@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Countries
   m_EditorClassIdentifier: 
   data:
-  - Syria
   - Norway
   - Japan
-  - Venus
-  - Gotham
+  - Syria
+  - South Korea
+  - Sweeden
   - Ukraine
   - USA
   - Turkey

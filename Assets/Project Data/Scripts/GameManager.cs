@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
 
     private MiniCharController currentArrival;
     private int success, failure;
-    private List<GameObject> currentObjects;
 
     private void Awake() {
         if (Instance != null) {
@@ -86,7 +85,6 @@ public class GameManager : MonoBehaviour
         foreach (var itemData in character.items)
         {
             var instance=Instantiate(itemData.itemPrefab,spawners[counter++].position,quaternion.identity,spawnParent);
-            currentObjects.Add(instance);
             Document document = instance.GetComponent<Document>();
             document.imageHolder.sprite = character.portrait;
             document.textHolder[0].text = character.fullName;
@@ -220,9 +218,9 @@ public class GameManager : MonoBehaviour
             failureText.text = $"Failures: {failure}";
         }
         
-        foreach (GameObject obj in currentObjects)
+        foreach (Transform obj in spawnParent)
         {
-            Destroy(obj);
+            Destroy(obj.gameObject);
         }
         currentArrival.Served();
         currentArrival = null;
