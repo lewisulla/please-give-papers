@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DeskButton : MonoBehaviour
 {
+    public bool isRed;
     private SpriteRenderer _spriteRenderer;
     private void Start()
     {
@@ -21,5 +22,7 @@ public class DeskButton : MonoBehaviour
         _spriteRenderer.color = Color.white;
         yield return new WaitForSecondsRealtime(0.25f);
         _spriteRenderer.color = new Color32(175, 175, 175, 255);
+        
+        GameManager.Instance.ButtonCall(isRed);
     } 
 }

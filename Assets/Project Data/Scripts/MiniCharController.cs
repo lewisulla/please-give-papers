@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class MiniCharController : MonoBehaviour
 {
     public string fullName, country, birthDate, gender;
+    public bool isReal;
     public Sprite portrait;
     public List<ItemData> items;
 
@@ -19,21 +20,30 @@ public class MiniCharController : MonoBehaviour
         _rb.velocity = new Vector2(2,0);
     }
 
-    public void CharSetup(string fullName, string country, Sprite portrait, List<ItemData> items, string birthDate)
+    public void CharSetup(string fullName, string country, Sprite portrait, List<ItemData> items, string birthDate, int gender)
     {
+        int percentage = Random.Range(0, 100);
+        if (percentage > 80)
+        {
+            isReal = false;
+        }
+        else
+        {
+            isReal = true;
+        }
+
         this.fullName = fullName;
         this.country = country;
         this.portrait = portrait;
         this.items = items;
         this.birthDate = birthDate;
-
-        if (Random.Range(1, 3) == 1)
+        if (gender == 1)
         {
-            gender = "Male";
+            this.gender = "Male";
         }
         else
         {
-            gender = "Female";
+            this.gender = "Female";
         }
     }
 
@@ -71,7 +81,6 @@ public class MiniCharController : MonoBehaviour
         Image gamePortrait = instance.portrait;
         gamePortrait.enabled = true;
         gamePortrait.sprite = portrait;
-        
         StartCoroutine(instance.SpawnItem(this));
 
 
