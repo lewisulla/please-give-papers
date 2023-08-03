@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Countries
   m_EditorClassIdentifier: 
   data:
-  - Norway
-  - Japan
-  - Syria
-  - South Korea
-  - Sweeden
-  - Ukraine
-  - USA
-  - Turkey
-  - Germany
-  - India
+  - Chareclia s.r.
+  - Replubristan
+  - "R\xE8kals\xE9 Rep."
+  - Unknown
+  - Sweedania
+  - Sweed. s.r.
+  - U.F.R.
+  - "Turk\xE8ya rep."
+  - "German\xE8y"
+  - Indianistan
