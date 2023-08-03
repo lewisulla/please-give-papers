@@ -1,8 +1,7 @@
-# Papers-Please_Unity
+# Please-give-papers
 
-We've created a game that is heavily inspired by "Papers Please" on Unity3D game engine for a game jam. Unfortunately, due to real-life problems we couldn't finish it on time.
-Anyone who is interested can use it as a foundation for this type of a game project.
+We've created a mod for a game that is heavily inspired by "Papers Please" on Unity3D game engine for a game jam. Unfortunately, due to real-life problems they couldn't finish it on time.
+we used it tu create this short game.
 
-All of the 2D assets are our own work. Character portraits are created by emirshn.
+most of the 2D assets are our not our work. Character portraits are created by emirshn.
 
-![Animation](https://user-images.githubusercontent.com/64265868/155843084-d95f8e43-b264-4551-a40b-dce2d782453f.gif)
